@@ -17,15 +17,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `welcome-page`,
+        name: `welcome-page-image`,
         path: `${__dirname}/src/components/frontend/home-pages/welcome-page/images`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `welcome-page`,
-        path: `${__dirname}/src/components/frontend/home-pages/welcome-page`,
       },
     },
     {
