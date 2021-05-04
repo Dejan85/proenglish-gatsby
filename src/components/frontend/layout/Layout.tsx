@@ -4,10 +4,10 @@ import { LayoutProps } from './types';
 import './styles.scss';
 
 const Layout = (props: LayoutProps): JSX.Element => {
-  const { children, as = `main`, className } = props;
+  const { children, as = 'main', className } = props;
   const Wrapper = as;
   return (
-    <Wrapper className={`layout ${className}`}>
+    <Wrapper className={className ? `layout ${className}` : 'layout'}>
       <Header />
       {children}
     </Wrapper>
