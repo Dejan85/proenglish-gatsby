@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from '@/components/ui';
+import { Container, Heading, Text } from '@/components/ui';
 import './styles.scss';
 import { useStaticQuery, graphql } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
@@ -49,13 +49,14 @@ const WelcomePage = (): JSX.Element => {
             },
           } = item;
           return (
-            <>
-              <h1>{heading}</h1>
-              <p>{text}</p>
-            </>
+            <Container className="home-welcome-page__text-content">
+              <Heading className="home-welcome-page__heading">
+                {heading}
+              </Heading>
+              <Text className="home-welcome-page__text">{text}</Text>
+            </Container>
           );
         })}
-        <p>welcome page</p>
       </Container>
     </BgImage>
   );
