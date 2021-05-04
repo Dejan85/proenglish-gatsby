@@ -1,0 +1,60 @@
+@import '../../../styles/mixins/gradient';
+
+.home-icon-boxes {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: -10rem;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 17.6rem;
+  height: 25rem;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 17.6rem;
+
+  &--box0 {
+    @include gradient(#a23272, #b83983);
+  }
+
+  &--box1 {
+    @include gradient(#fb385a, #fd4c45);
+  }
+
+  &--box2 {
+    @include gradient(#ff8c2c, #ffb138);
+  }
+
+  &--box3 {
+    @include gradient(#5db633, #56ab2f);
+  }
+
+  &--box4 {
+    @include gradient(#0085da, #019cef);
+  }
+
+  svg {
+    font-size: 7rem;
+    color: white;
+  }
+}
+
+.home-boxes-paragraph {
+  padding: 1.3rem 0;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.4;
+  font-weight: 700;
+}

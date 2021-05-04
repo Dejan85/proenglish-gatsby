@@ -5,6 +5,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
 // import BackgroundImage from 'gatsby-background-image';
 import { BgImage } from 'gbimage-bridge';
+import uniqid from 'uniqid';
 
 const query = graphql`
   {
@@ -49,7 +50,10 @@ const WelcomePage = (): JSX.Element => {
             },
           } = item;
           return (
-            <Container className="home-welcome-page__text-content">
+            <Container
+              key={uniqid()}
+              className="home-welcome-page__text-content"
+            >
               <Heading className="home-welcome-page__heading">
                 {heading}
               </Heading>
