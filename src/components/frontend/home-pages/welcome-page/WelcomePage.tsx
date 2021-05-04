@@ -17,16 +17,44 @@ const query = graphql`
         )
       }
     }
+    content: allMdx(
+      filter: { frontmatter: { title: { eq: "welcome page content" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            heading
+            text
+          }
+        }
+      }
+    }
   }
 `;
 
 const WelcomePage = (): JSX.Element => {
-  const { backgroundImage } = useStaticQuery(query);
+  const {
+    backgroundImage,
+    content: { edges },
+  } = useStaticQuery(query);
   const pluginImage = getImage(backgroundImage);
 
   return (
     <BgImage className="home-welcome-page__bg-image" image={pluginImage}>
       <Container width="100%" className="home-welcome-page">
+        {edges.map((item) => {
+          const {
+            node: {
+              frontmatter: { heading, text },
+            },
+          } = item;
+          return (
+            <>
+              <h1>{heading}</h1>
+              <p>{text}</p>
+            </>
+          );
+        })}
         <p>welcome page</p>
       </Container>
     </BgImage>
