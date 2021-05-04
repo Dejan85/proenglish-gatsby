@@ -15,11 +15,30 @@ const Nav = (): JSX.Element => {
   };
 
   return (
-    <Wrapper className="nav">
-      <FiAlignJustify className="nav__responsive-btn" onClick={navHandler} />
-      {toggleNav && (
+    <>
+      <Wrapper className="nav nav__respond-nav">
         <Element as="div" className="nav__wrapper">
-          <>
+          {NAV_CONTENT.map(
+            ({ name, path }): JSX.Element => (
+              <Element as="div" key={uniqid()}>
+                <Link
+                  to={path}
+                  className="nav__link"
+                  activeClassName="nav__active"
+                >
+                  {name}
+                </Link>
+              </Element>
+            ),
+          )}
+        </Element>
+      </Wrapper>
+
+      <FiAlignJustify className="nav__responsive-btn" onClick={navHandler} />
+
+      {toggleNav && (
+        <Wrapper className="nav">
+          <Element as="div" className="nav__wrapper">
             {NAV_CONTENT.map(
               ({ name, path }): JSX.Element => (
                 <Element as="div" key={uniqid()}>
@@ -33,10 +52,10 @@ const Nav = (): JSX.Element => {
                 </Element>
               ),
             )}
-          </>
-        </Element>
+          </Element>
+        </Wrapper>
       )}
-    </Wrapper>
+    </>
   );
 };
 

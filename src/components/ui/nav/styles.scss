@@ -5,6 +5,12 @@
 .nav {
   display: flex;
 
+  &__respond-nav {
+    @include respond(900) {
+      display: none;
+    }
+  }
+
   @include respond(900) {
     position: absolute;
     right: 0;
@@ -71,6 +77,7 @@
       position: absolute;
       top: 2rem;
       right: 2rem;
+      z-index: 102;
     }
   }
 
