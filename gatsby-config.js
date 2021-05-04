@@ -14,6 +14,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `welcome-page`,
+        path: `${__dirname}/src/components/frontend/home-pages/welcome-page/images`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [

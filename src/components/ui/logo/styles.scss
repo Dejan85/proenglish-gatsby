@@ -3,7 +3,6 @@
 .logo {
   @include respond(900) {
     position: absolute;
-    top: 1.3rem;
     left: 2rem;
   }
 }
