@@ -3,7 +3,6 @@ import { Container, Heading, Text } from '@/components/ui';
 import './styles.scss';
 import { useStaticQuery, graphql } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
-// import BackgroundImage from 'gatsby-background-image';
 import { BgImage } from 'gbimage-bridge';
 import uniqid from 'uniqid';
 
