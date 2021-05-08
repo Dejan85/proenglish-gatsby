@@ -12,3 +12,5 @@ export { BlogModal } from './blog-modal';
 export { Loading } from './loader';
 export { Button } from './button';
 export { Input } from './input';
+export { ExperienceModal } from './experience-modal';
+export { CarouselUi } from './carousel';

@@ -7,6 +7,7 @@ import {
   Course,
   Blog,
   Newsletter,
+  Experience,
 } from '@/components/frontend';
 
 const Home: React.FC<PageProps> = (): JSX.Element => (
@@ -16,6 +17,7 @@ const Home: React.FC<PageProps> = (): JSX.Element => (
     <Course />
     <Blog />
     <Newsletter />
+    <Experience />
   </>
 );
 
