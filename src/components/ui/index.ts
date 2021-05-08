@@ -11,3 +11,4 @@ export { Line } from './Line';
 export { BlogModal } from './blog-modal';
 export { Loading } from './loader';
 export { Button } from './button';
+export { Input } from './input';
