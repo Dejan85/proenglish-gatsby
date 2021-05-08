@@ -23,6 +23,8 @@ const Blog = (): JSX.Element => {
     request(setBlogData);
   }, []);
 
+  console.log('test', blogData);
+
   return <RenderUi blogData={blogData} />;
 };
 

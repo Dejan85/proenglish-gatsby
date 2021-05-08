@@ -12,7 +12,7 @@ import {
   Loading,
 } from '@/components/ui';
 // import { FormatTime } from '~/src/utils/timeAndDateHandlers';
-// import { SubStr } from '~/src/utils/SubStr';
+import { SubStr } from '@/utils/SubStr';
 import { headingText } from '../messages';
 
 const RenderModal = (props: { blogData: object[] }): JSX.Element => {
@@ -40,7 +40,7 @@ const RenderModal = (props: { blogData: object[] }): JSX.Element => {
 
             <ContentContainer className="home-blog__modal-text-container">
               <Text as="p" className="home-blog__modal-text">
-                {/* <SubStr>{item.description}</SubStr> */}
+                <SubStr>{item.description}</SubStr>
               </Text>
             </ContentContainer>
 
@@ -84,6 +84,7 @@ const RenderLine: JSX.Element = (
 
 export const RenderUi = (props: { blogData: object[] }): JSX.Element => {
   const { blogData } = props;
+
   return (
     <>
       <SubContainer className="home-blog">
