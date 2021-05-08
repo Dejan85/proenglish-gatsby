@@ -16,15 +16,6 @@ import {
   linkText2,
   linkPath,
 } from './messages';
-// import img from './images/img2.jpg';
-// import img2 from './images/img.jpg';
-
-// const renderImage = (img: string): JSX.Element => (
-//   <Image disablelazyLoad alt="img" src={img} />
-// );
-
-// const imageUi = renderImage(img);
-// const imageUi2 = renderImage(img2);
 
 const MemoizedUi: JSX.Element = (
   <>

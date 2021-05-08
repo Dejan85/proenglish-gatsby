@@ -9,14 +9,20 @@ import {
 import { graphql, useStaticQuery } from 'gatsby';
 import { BgImage } from 'gbimage-bridge';
 import { getImage } from 'gatsby-plugin-image';
-import { firstMsg, secondMsg } from './messages';
 import './styles.scss';
 
 export const query = graphql`
   {
-    file(relativePath: { eq: "welcome-page-background.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(placeholder: BLURRED)
+    mdx(frontmatter: { title: { eq: "welcome-page" } }) {
+      frontmatter {
+        title
+        text
+        heading
+        image {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED)
+          }
+        }
       }
     }
   }
@@ -25,19 +31,27 @@ export const query = graphql`
 const WelcomePage = (): JSX.Element => {
   const data = useStaticQuery(query);
   const {
-    file: { childImageSharp },
+    mdx: {
+      frontmatter: {
+        title,
+        heading,
+        text,
+        image: { childImageSharp },
+      },
+    },
   } = data;
-  const image = getImage(childImageSharp);
+
+  const imageSrc = getImage(childImageSharp);
 
   return (
-    <BgImage className="welcome-page__bg-image" image={image}>
+    <BgImage className="welcome-page__bg-image" image={imageSrc}>
       <ContentContainer className="welcome-page">
         <ContentContainer className="welcome-page__text">
           <Heading as="h1" className="welcome-page__heading">
-            {firstMsg}
+            {heading}
           </Heading>
           <Text as="p" className="welcome-page__paragraph">
-            {secondMsg}
+            {text}
           </Text>
         </ContentContainer>
       </ContentContainer>

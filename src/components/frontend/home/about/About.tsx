@@ -10,13 +10,23 @@ import {
 import uniqid from 'uniqid';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import { getImage, GatsbyImage } from 'gatsby-plugin-image';
-import { aboutText, headingText, linkText } from './messages';
 
 export const query = graphql`
   {
-    file(relativePath: { eq: "home-about-image.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(placeholder: BLURRED)
+    mdx(frontmatter: { title: { eq: "home-about" } }) {
+      frontmatter {
+        title
+        heading
+        text
+        text2
+        text3
+        text4
+        linkText
+        image {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED)
+          }
+        }
       }
     }
   }
@@ -25,25 +35,38 @@ export const query = graphql`
 const About = (): JSX.Element => {
   const data = useStaticQuery(query);
   const {
-    file: { childImageSharp },
+    mdx: {
+      frontmatter: {
+        title,
+        heading,
+        text,
+        text2,
+        text3,
+        text4,
+        linkText,
+        image: { childImageSharp },
+      },
+    },
   } = data;
+
   const pathToImage = getImage(childImageSharp);
+  const aboutText = [text, text2, text3, text4];
 
   return (
     <SubContainer className="home-about">
       <ContentContainer className="home-about__content">
         <ContentContainer className="home-about__text">
           <Heading as="h2" className="home-about__heading">
-            {headingText}
+            {heading}
           </Heading>
           {aboutText.map(
-            (text: string): JSX.Element => (
+            (txt: string): JSX.Element => (
               <ContentContainer
                 className="home-about__text--container"
                 key={uniqid()}
               >
                 <Text as="p" className="default-paragraph">
-                  {text}
+                  {txt}
                 </Text>
               </ContentContainer>
             ),
