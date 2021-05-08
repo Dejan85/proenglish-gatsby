@@ -1,11 +1,11 @@
-@import "../../../../styles/variables/fonts";
-@import "../../../../styles/variables/colors";
-@import "../../../../styles/mixins/respond";
+@import '../../../../styles/variables/fonts';
+@import '../../../../styles/variables/colors';
+@import '../../../../styles/mixins/respond';
 
 .home-about {
   &__content {
     justify-content: space-between;
-    margin-top: 10rem;
+    margin-top: 25rem;
   }
 
   &__text {

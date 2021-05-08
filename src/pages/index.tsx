@@ -24,10 +24,10 @@ const Home: React.FC<PageProps> = (): JSX.Element => {
   }, []);
 
   return (
-    <div>
+    <>
       <WelcomePage />
       <About />
-    </div>
+    </>
   );
 };
 

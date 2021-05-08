@@ -16,7 +16,7 @@ export const query = graphql`
   {
     file(relativePath: { eq: "welcome-page-background.jpg" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
+        gatsbyImageData(placeholder: BLURRED)
       }
     }
   }
@@ -30,7 +30,7 @@ const WelcomePage = (): JSX.Element => {
   const image = getImage(childImageSharp);
 
   return (
-    <BgImage image={image}>
+    <BgImage className="welcome-page__bg-image" image={image}>
       <ContentContainer className="welcome-page">
         <ContentContainer className="welcome-page__text">
           <Heading as="h1" className="welcome-page__heading">
@@ -41,7 +41,7 @@ const WelcomePage = (): JSX.Element => {
           </Text>
         </ContentContainer>
       </ContentContainer>
-      <SubContainer>
+      <SubContainer className="welcome-page__boxes">
         <HomeIconsBoxes />
       </SubContainer>
     </BgImage>
