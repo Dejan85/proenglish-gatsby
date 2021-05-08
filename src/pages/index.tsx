@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { PageProps } from 'gatsby';
 import '@/styles/main.scss';
 // import axios from 'axios';
-import { WelcomePage, About } from '@/components/frontend';
+import { WelcomePage, About, Course } from '@/components/frontend';
 
 // const request = async (): any => {
 //   try {
@@ -27,6 +27,7 @@ const Home: React.FC<PageProps> = (): JSX.Element => {
     <>
       <WelcomePage />
       <About />
+      <Course />
     </>
   );
 };
