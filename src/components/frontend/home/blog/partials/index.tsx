@@ -1,12 +1,20 @@
-import React from "react";
-import uniqid from "uniqid";
-import { Link as LinkRouter } from "react-router-dom";
-import { Line, BlogModal, Image, Link, Text } from "~/src/components/ui";
-import { FormatTime } from "~/src/utils/timeAndDateHandlers";
-import { SubStr } from "~/src/utils/SubStr";
-import { Heading, SubContainer, ContentContainer } from "~/src/components/ui";
-import { headingText } from "../messages";
-import { Loading } from "~/src/components/ui";
+import React from 'react';
+import uniqid from 'uniqid';
+import { Link } from 'gatsby';
+import {
+  Line,
+  BlogModal,
+  Image,
+  Link as UiLink,
+  Text,
+  Heading,
+  SubContainer,
+  ContentContainer,
+  Loading,
+} from '@/components/ui';
+// import { FormatTime } from '~/src/utils/timeAndDateHandlers';
+// import { SubStr } from '~/src/utils/SubStr';
+import { headingText } from '../messages';
 
 const RenderModal = (props: { blogData: object[] }): JSX.Element => {
   const { blogData: data } = props;
@@ -23,17 +31,17 @@ const RenderModal = (props: { blogData: object[] }): JSX.Element => {
               className="home-blog__modal-image"
               disablelazyLoad
             />
-            <Link
-              as={LinkRouter}
+            <UiLink
+              as={Link}
               className="no-background-color heading-link home-blog__modal-link"
               to="/"
             >
               {item.title}
-            </Link>
+            </UiLink>
 
             <ContentContainer className="home-blog__modal-text-container">
               <Text as="p" className="home-blog__modal-text">
-                <SubStr>{item.description}</SubStr>
+                {/* <SubStr>{item.description}</SubStr> */}
               </Text>
             </ContentContainer>
 
@@ -43,7 +51,7 @@ const RenderModal = (props: { blogData: object[] }): JSX.Element => {
 
             <ContentContainer className="home-blog__modal-date-container">
               <Text as="span" className="home-blog__blog-modal-span">
-                <FormatTime>{item.created}</FormatTime>
+                {/* <FormatTime>{item.created}</FormatTime> */}
               </Text>
             </ContentContainer>
 
@@ -62,7 +70,7 @@ const RenderModal = (props: { blogData: object[] }): JSX.Element => {
               </Text>
             </ContentContainer>
           </BlogModal>
-        )
+        ),
       )}
     </>
   );

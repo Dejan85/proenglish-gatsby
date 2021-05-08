@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './styles.scss';
-import { RenderUi } from './partials';
 import axios from 'axios';
+import { RenderUi } from './partials';
 
 const request = async (setBlogData: {
   (value: (prevState: undefined) => undefined): void;
@@ -23,9 +23,7 @@ const Blog = (): JSX.Element => {
     request(setBlogData);
   }, []);
 
-  // return <RenderUi blogData={blogData} />;
-
-  return <div>test</div>;
+  return <RenderUi blogData={blogData} />;
 };
 
 export default Blog;
