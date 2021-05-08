@@ -32,18 +32,7 @@ const RenderModal = (props: { blogData: object[] }): JSX.Element => {
       {data.slice(0, 4).map(
         (item: any): JSX.Element => {
           const test = `${item.photo.data.data}`;
-
-          // const x = Buffer.from(test).toString('base64');
-
-          // const base64Image = base64(test);
-          // const image = `data:image/png;base64,${base64Image}`;
-
-          // const pathToImage = getImage(item.photo.data.data);
-
           const image = toBase64(test);
-
-          console.log('test pathToImage', item.photo.data);
-
           const base64Image = `data:image/png;base64,${image}`;
 
           return (
