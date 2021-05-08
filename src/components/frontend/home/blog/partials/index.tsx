@@ -4,7 +4,6 @@ import { Link } from 'gatsby';
 import {
   Line,
   BlogModal,
-  Image,
   Link as UiLink,
   Text,
   Heading,
@@ -24,13 +23,13 @@ const RenderModal = (props: { blogData: object[] }): JSX.Element => {
       {data.slice(0, 4).map(
         (item: any): JSX.Element => (
           <BlogModal key={uniqid()}>
-            <Image
+            {/* <Image
               alt="img"
               src={item.photo}
               type="base64"
               className="home-blog__modal-image"
               disablelazyLoad
-            />
+            /> */}
             <UiLink
               as={Link}
               className="no-background-color heading-link home-blog__modal-link"

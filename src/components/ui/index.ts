@@ -9,3 +9,4 @@ export { Heading } from './heading';
 export { Link } from './Link';
 export { Line } from './Line';
 export { BlogModal } from './blog-modal';
+export { Loading } from './loader';
