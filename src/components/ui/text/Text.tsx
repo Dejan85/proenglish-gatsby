@@ -1,10 +1,19 @@
 import React from 'react';
 import { TextProps } from './types';
 
-const Text = (props: TextProps): JSX.Element => {
-  const { children, as = 'p', className } = props;
+function Text(props: TextProps): JSX.Element {
+  const { as = 'p', className: customClassName, children } = props;
   const Wrapper = as;
-  return <Wrapper className={className}>{children}</Wrapper>;
-};
+  const className = 'default-paragraph';
+  return (
+    <Wrapper
+      className={
+        customClassName ? `${className} ${customClassName}` : className
+      }
+    >
+      {children}
+    </Wrapper>
+  );
+}
 
 export default Text;

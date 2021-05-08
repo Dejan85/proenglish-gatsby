@@ -1,0 +1,8 @@
+@import '../../../styles/mixins/respond';
+
+.sub-container {
+  display: flex;
+  max-width: 120rem;
+  width: 100%;
+  padding: 0 1rem;
+}

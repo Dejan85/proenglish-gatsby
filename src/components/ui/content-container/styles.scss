@@ -1,0 +1,23 @@
+@import '../../../styles/variables/colors';
+
+.content-container {
+  display: flex;
+  width: 100%;
+
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.box-shadow {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.13);
+}
+
+.background-color-main-color {
+  background-color: $main-color;
+}
+
+.background-color-white {
+  background-color: white;
+}

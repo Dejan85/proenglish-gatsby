@@ -1,7 +1,7 @@
 import React from 'react';
-import { Header } from '@/components/frontend';
 import { LayoutProps } from './types';
 import './styles.scss';
+import Header from '../header';
 
 const Layout = (props: LayoutProps): JSX.Element => {
   const { children, as = 'main', className } = props;

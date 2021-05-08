@@ -1,0 +1,28 @@
+@import '../../../styles/variables/fonts';
+@import '../../../styles/mixins/respond';
+
+.default-heading {
+  font-size: 5rem;
+  color: white;
+  font-family: $lato-sans-serif;
+  text-align: center;
+  line-height: 60px;
+}
+
+.default-heading {
+  font-size: 3.7rem;
+  color: #1a1a24;
+
+  @include respond(900) {
+    font-size: 4rem;
+  }
+}
+
+.footer-heading {
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1.1;
+  font-weight: 400;
+  font-family: Fascinate, cursive;
+  font-size: 1.7rem;
+}

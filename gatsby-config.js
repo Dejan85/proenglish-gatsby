@@ -10,15 +10,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `logo`,
-        path: `${__dirname}/src/components/ui/logo/images`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `welcome-page-image`,
-        path: `${__dirname}/src/components/frontend/home-pages/welcome-page/images`,
+        name: `images`,
+        path: `${__dirname}/src/assets/images`,
       },
     },
     {
@@ -31,6 +24,12 @@ module.exports = {
           '100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i',
         ],
         display: 'swap',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-preconnect',
+      options: {
+        domains: ['https://http://207.154.226.106'],
       },
     },
   ],

@@ -1,0 +1,105 @@
+@import '../../../styles/variables/colors.scss';
+@import '../../../styles/variables/fonts.scss';
+@import '../../../styles/mixins/respond';
+
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 68rem;
+  width: 100%;
+  height: 6rem;
+  color: white;
+
+  @include respond(900) {
+    display: none;
+  }
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem;
+    transition: all 0.5s;
+    list-style-type: none;
+
+    &:hover {
+      background: $main-color;
+      color: white;
+    }
+
+    // font
+    text-decoration: none;
+    color: $text-color;
+    font-size: 1.6rem;
+    font-family: $lato-sans-serif;
+    font-weight: 700;
+  }
+}
+
+.active {
+  background: $main-color;
+  color: white;
+}
+
+.responsive-navigation {
+  display: none;
+}
+
+@include respond(900) {
+  .responsive-navigation {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 6rem;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: white;
+
+    &__icon {
+      color: black !important;
+      font-size: 4rem !important;
+      margin-right: 2rem;
+      z-index: 109;
+    }
+
+    &__container {
+      position: absolute;
+      width: 100%;
+      flex-direction: column;
+      top: 0;
+      z-index: 108;
+      background-color: white;
+    }
+
+    &__link {
+      padding: 6rem 1rem;
+      transition: all 0.5s;
+      width: 100%;
+      text-align: center;
+
+      // font
+      text-decoration: none;
+      color: $main-color;
+      font-size: 4rem;
+      font-family: $lato-sans-serif;
+      font-weight: 700;
+    }
+
+    &__list {
+      display: flex;
+      background-color: white;
+      width: 100%;
+      justify-content: center;
+      list-style-type: none;
+    }
+
+    &__active {
+      background-color: white;
+    }
+  }
+}

@@ -1,6 +1,5 @@
 import React from 'react';
 import uniqid from 'uniqid';
-import { Container } from '@/components/ui';
 import {
   FaUsers,
   FaRegComments,
@@ -10,7 +9,6 @@ import {
 } from 'react-icons/fa';
 import Box from './Box';
 import { boxesText } from './constants';
-import './styles.scss';
 
 const Wrapper = 'div';
 const className = 'home-icon-boxes';
@@ -30,11 +28,7 @@ const generateBoxes = (): JSX.Element[] =>
 const boxes = generateBoxes();
 
 function HomeIconsBoxes(): JSX.Element {
-  return (
-    <Container>
-      <Wrapper className={className}>{boxes}</Wrapper>
-    </Container>
-  );
+  return <Wrapper className={className}>{boxes}</Wrapper>;
 }
 
 export default HomeIconsBoxes;

@@ -1,8 +1,9 @@
-import Container from './container/Container';
-import Logo from './logo/Logo';
-import Nav from './nav/Nav';
-import Heading from './heading/Heading';
-import Text from './text/Text';
-import HomeIconsBoxes from './home-icons-boxes/HomeIconsBoxes';
-
-export { Container, Logo, Nav, Heading, Text, HomeIconsBoxes };
+export { Header } from './header';
+export { SubContainer } from './sub-container';
+export { Logo } from './logo';
+export { Navigation } from './navigation';
+export { ContentContainer } from './content-container';
+export { Text } from './text';
+export { HomeIconsBoxes } from './home-icons-boxes';
+export { Heading } from './heading';
+export { Link } from './Link';

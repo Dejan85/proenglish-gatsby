@@ -1,12 +1,30 @@
 import React from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
-import './styles.scss';
+import { graphql, useStaticQuery } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+
+const Wrapper = 'div';
+const className = 'logo';
+
+export const query = graphql`
+  {
+    file(relativePath: { eq: "logo.png" }) {
+      childImageSharp {
+        gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
+      }
+    }
+  }
+`;
 
 const Logo = (): JSX.Element => {
-  const Wrapper = 'div';
+  const data = useStaticQuery(query);
+  const {
+    file: { childImageSharp },
+  } = data;
+  const pathToImage = getImage(childImageSharp);
+
   return (
-    <Wrapper className="logo">
-      <StaticImage src="./images/logo.png" alt="logo" placeholder="blurred" />
+    <Wrapper className={className}>
+      <GatsbyImage image={pathToImage} alt="logo" />
     </Wrapper>
   );
 };
