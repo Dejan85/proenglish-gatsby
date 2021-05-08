@@ -1,8 +1,6 @@
 import React from 'react';
 import './styles.scss';
 import { ContentContainer, Text, Input, Button } from '@/components/ui';
-// import img from './images/bckg2.jpg';
-import { msg } from './messages';
 import { graphql, useStaticQuery } from 'gatsby';
 import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 
