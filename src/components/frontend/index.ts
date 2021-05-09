@@ -6,3 +6,4 @@ export { Newsletter } from './home/newsletter';
 export { Experience } from './home/experience';
 export { About } from './about';
 export { Course } from './course';
+export { Exams } from './exams';
