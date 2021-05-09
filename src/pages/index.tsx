@@ -4,7 +4,7 @@ import '@/styles/main.scss';
 import {
   WelcomePage,
   HomeAbout,
-  Course,
+  HomeCourse,
   Blog,
   Newsletter,
   Experience,
@@ -14,7 +14,7 @@ const Home: React.FC<PageProps> = (): JSX.Element => (
   <>
     <WelcomePage />
     <HomeAbout />
-    <Course />
+    <HomeCourse />
     <Blog />
     <Newsletter />
     <Experience />
