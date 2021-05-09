@@ -141,7 +141,13 @@
   }
 
   &__diagram-nav-icon {
+    color: white !important;
     font-size: 2rem;
+
+    > svg {
+      font-size: 2rem;
+      color: white !important;
+    }
   }
 
   &__paragraph-container {

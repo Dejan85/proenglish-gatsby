@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { ContentContainer, Link, Text } from '@/components/ui';
 import uniqid from 'uniqid';
 import { useStringSplit } from '@/hooks';
+import { FaCaretLeft, FaCaretRight } from 'react-icons/fa';
 import { heading, text, textInSpan, courseData } from '../messages';
 
 const initCourse = ['a1', 'a2', 'b1', 'b2', 'c1', 'c2'];
@@ -93,7 +94,7 @@ const RenderUi = (): JSX.Element => {
                 counterHandlerDecrese(setCounter, setDiagram, counter, diagram)
               }
             >
-              {/* <FontAwesomeIcon className="fas fa-chevron-left course__diagram-nav-icon" /> */}
+              <FaCaretLeft className="course__diagram-nav-icon" />
             </ContentContainer>
 
             <ContentContainer
@@ -102,7 +103,7 @@ const RenderUi = (): JSX.Element => {
               }
               className="course__diagram-nav-icon-container"
             >
-              {/* <FontAwesomeIcon className="fas fa-chevron-right course__diagram-nav-icon" /> */}
+              <FaCaretRight className="course__diagram-nav-icon" />
             </ContentContainer>
           </ContentContainer>
           <ContentContainer className="course__paragraph-container">
