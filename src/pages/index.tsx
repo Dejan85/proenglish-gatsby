@@ -3,7 +3,7 @@ import { PageProps } from 'gatsby';
 import '@/styles/main.scss';
 import {
   WelcomePage,
-  About,
+  HomeAbout,
   Course,
   Blog,
   Newsletter,
@@ -13,7 +13,7 @@ import {
 const Home: React.FC<PageProps> = (): JSX.Element => (
   <>
     <WelcomePage />
-    <About />
+    <HomeAbout />
     <Course />
     <Blog />
     <Newsletter />
