@@ -79,7 +79,7 @@ const About = (): JSX.Element => {
           <GatsbyImage
             className="home-about__image"
             image={pathToImage}
-            alt="logo"
+            alt="img"
           />
         </ContentContainer>
       </ContentContainer>
