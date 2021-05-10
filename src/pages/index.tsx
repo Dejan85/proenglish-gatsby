@@ -6,6 +6,7 @@ import {
   HomeAbout,
   HomeCourse,
   Blog,
+  HomeEvents,
   Newsletter,
   Experience,
 } from '@/components/frontend';
@@ -16,6 +17,7 @@ const Home: React.FC<PageProps> = (): JSX.Element => (
     <HomeAbout />
     <HomeCourse />
     <Blog />
+    <HomeEvents />
     <Newsletter />
     <Experience />
   </>

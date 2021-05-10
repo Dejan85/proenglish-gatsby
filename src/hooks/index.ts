@@ -1,4 +1,5 @@
 import useStringSplit from './useStringSplit';
 import useTabs from './useTabs';
+import useEventsDataHook from './events-data-hooks/useEventsDataHook';
 
-export { useStringSplit, useTabs };
+export { useStringSplit, useTabs, useEventsDataHook };

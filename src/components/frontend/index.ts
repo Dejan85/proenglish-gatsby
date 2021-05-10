@@ -1,6 +1,7 @@
 export { WelcomePage } from './home/welcome-page';
 export { About as HomeAbout } from './home/about';
 export { Course as HomeCourse } from './home/course';
+export { Events as HomeEvents } from './home/events';
 export { Blog } from './home/blog';
 export { Newsletter } from './home/newsletter';
 export { Experience } from './home/experience';

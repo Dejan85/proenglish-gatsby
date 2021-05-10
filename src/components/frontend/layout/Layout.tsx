@@ -1,19 +1,27 @@
 import React from 'react';
-import { LayoutProps } from './types';
+import { Provider } from 'react-redux';
+import configureStore from '@/redux/configureStore';
 import './styles.scss';
 import Header from '../header';
 import Footer from '../footer/Footer';
+
+import { LayoutProps } from './types';
+
+const initialState = {};
+const store = configureStore(initialState);
 
 const Layout = (props: LayoutProps): JSX.Element => {
   const { children, as = 'main', className } = props;
   const Wrapper = as;
 
   return (
-    <Wrapper className={className ? `layout ${className}` : 'layout'}>
-      <Header />
-      {children}
-      <Footer />
-    </Wrapper>
+    <Provider store={store}>
+      <Wrapper className={className ? `layout ${className}` : 'layout'}>
+        <Header />
+        {children}
+        <Footer />
+      </Wrapper>
+    </Provider>
   );
 };
 

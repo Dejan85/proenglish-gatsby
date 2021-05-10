@@ -36,7 +36,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-preconnect',
       options: {
-        domains: ['https://http://207.154.226.106'],
+        domains: ['http://207.154.226.106'],
       },
     },
   ],

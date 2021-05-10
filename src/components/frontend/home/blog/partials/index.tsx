@@ -31,7 +31,7 @@ const RenderModal = (props: { blogData: object[] }): JSX.Element => {
     <>
       {data.slice(0, 4).map(
         (item: any): JSX.Element => {
-          const test = `${item.photo.data.data}`;
+          const test = `${item.photo.data?.data}`;
           const image = toBase64(test);
           const base64Image = `data:image/png;base64,${image}`;
 
@@ -44,11 +44,11 @@ const RenderModal = (props: { blogData: object[] }): JSX.Element => {
                 className="home-blog__modal-image"
                 disablelazyLoad
               /> */}
-              <GatsbyImage
+              {/* <GatsbyImage
                 image={item.photo.data.data}
                 className="home-blog__modal-image"
                 alt="image"
-              />
+              /> */}
               <UiLink
                 as={Link}
                 className="no-background-color heading-link home-blog__modal-link"
