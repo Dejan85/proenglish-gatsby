@@ -16,7 +16,6 @@ const About = (): JSX.Element => {
   const { aboutData } = useSelector(getAboutData);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
     if (!aboutData.length) {
       dispatch(fetchAboutDataAction());
     }

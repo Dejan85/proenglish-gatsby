@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { SubContainer, Heading, Text, ContentContainer } from '@/components/ui';
 import uniqid from 'uniqid';
 import TableRow from './partials/TableRow';
@@ -36,11 +36,6 @@ const RenderUi = (): JSX.Element => (
   </ContentContainer>
 );
 
-const Pricelist = (): JSX.Element => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-  return <RenderUi />;
-};
+const Pricelist = (): JSX.Element => <RenderUi />;
 
 export default Pricelist;

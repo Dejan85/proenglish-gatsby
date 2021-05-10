@@ -17,7 +17,6 @@ const Exams = (): JSX.Element => {
   const { examsData } = useSelector(getExamsData);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
     dispatch(fetchExamsData());
   }, []);
   return examsData.length ? (

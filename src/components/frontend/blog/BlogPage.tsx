@@ -22,7 +22,6 @@ const BlogPage = (props: any): JSX.Element => {
   const { blogData, oneBlogData } = useSelector(getBlogData);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
     if (!blogData.length) {
       dispatch(fetchBlogData());
     }

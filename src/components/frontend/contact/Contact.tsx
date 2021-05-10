@@ -1,11 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import RenderUi from './partials/RenderUi';
 
-const Contact = (): JSX.Element => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-  return <RenderUi />;
-};
+const Contact = (): JSX.Element => <RenderUi />;
 
 export default Contact;

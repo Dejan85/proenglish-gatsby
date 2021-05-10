@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import useEventsDataHook from '@/hooks/events-data-hooks/useEventsDataHook';
 import RenderUi from './partials/RenderUi';
 
@@ -10,10 +10,6 @@ const Events = (): JSX.Element => {
     generateDailyEvents,
     eventsData,
   } = useEventsDataHook();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <RenderUi
