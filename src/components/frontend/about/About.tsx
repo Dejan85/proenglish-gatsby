@@ -1,27 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './styles.scss';
-import axios from 'axios';
+import { useInjectSaga } from '@/utils/injectSaga';
+import { useInjectReducer } from '@/utils/injectReducer';
+import { useDispatch, useSelector } from 'react-redux';
+import { getAboutData } from './selectors';
+import { ABOUT_SCOPE } from './constants';
+import { fetchAboutDataAction, reducer } from './slice';
+import saga from './saga';
 import RenderUi from './partials/UiRender';
 
-const request = async (setBlogData: {
-  (value: (prevState: undefined) => undefined): void;
-  (arg0: any): void;
-}): any => {
-  try {
-    const urlX = 'http://207.154.226.106/about/get';
-    const { data } = await axios(urlX);
-    setBlogData(data);
-  } catch (error) {
-    console.log('test', error);
-  }
-};
-
 const About = (): JSX.Element => {
-  const [aboutData, setAboutData] = useState([]);
+  useInjectReducer({ key: ABOUT_SCOPE, reducer });
+  useInjectSaga({ key: ABOUT_SCOPE, saga });
+  const dispatch = useDispatch();
+  const { aboutData } = useSelector(getAboutData);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    request(setAboutData);
+    if (!aboutData.length) {
+      dispatch(fetchAboutDataAction());
+    }
   }, []);
 
   return <RenderUi aboutData={aboutData} />;

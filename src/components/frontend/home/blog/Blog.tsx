@@ -16,7 +16,9 @@ const Blog = (): JSX.Element => {
   const { blogData } = useSelector(getBlogData);
 
   useEffect(() => {
-    dispatch(fetchBlogData());
+    if (!blogData.length) {
+      dispatch(fetchBlogData());
+    }
   }, []);
 
   return <RenderUi blogData={blogData} />;
