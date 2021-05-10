@@ -17,8 +17,8 @@ const Home: React.FC<PageProps> = (): JSX.Element => (
     <HomeAbout />
     <HomeCourse />
     <HomeBlog />
-    <HomeEvents />
     <Newsletter />
+    <HomeEvents />
     <Experience />
   </>
 );

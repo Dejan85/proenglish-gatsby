@@ -16,3 +16,4 @@ export { ExperienceModal } from './experience-modal';
 export { CarouselUi } from './carousel';
 export { CalendarUi } from './calendar';
 export { CalendarInfo } from './calendar-info';
+export { Label } from './label';
