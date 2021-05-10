@@ -50,6 +50,8 @@ const Scheduler = (props: SchedulerProps) => {
     }
   }
 
+  const Events = renderDays.map((event) => event);
+
   const Wd = weeksDays.map(
     (day): JSX.Element => (
       <Text className="scheduler__weekdays-day" key={uniqid()} as="p">
@@ -62,7 +64,7 @@ const Scheduler = (props: SchedulerProps) => {
     <ContentContainer className="scheduler">
       <ContentContainer className="scheduler__weekdays">{Wd}</ContentContainer>
       <ContentContainer className="scheduler__calendar">
-        {/* {...renderDays} */}
+        {Events}
       </ContentContainer>
     </ContentContainer>
   );
