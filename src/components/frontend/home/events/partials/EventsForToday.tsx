@@ -1,13 +1,8 @@
 import React from 'react';
-import {
-  ContentContainer,
-  Heading,
-  CalendarInfo,
-  Text,
-  Link,
-} from '@/components/ui';
+import { ContentContainer, Heading, CalendarInfo, Text } from '@/components/ui';
 import { Scrollbars } from 'react-custom-scrollbars';
 import uniqid from 'uniqid';
+import { Link } from 'gatsby';
 
 const Render = (props: {
   filteredDailyEventsData: object[];
@@ -50,7 +45,7 @@ const EventsForToday = (props: {
       >
         <Render filteredDailyEventsData={filteredDailyEventsData} />
       </Scrollbars>
-      <Link className="home-events__link" as="a">
+      <Link className="home-events__link" to="/dogadjaji">
         Vidi Detaljno
       </Link>
     </ContentContainer>

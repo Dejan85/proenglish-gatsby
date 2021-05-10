@@ -1,13 +1,8 @@
 import React from 'react';
-import {
-  ContentContainer,
-  Heading,
-  CalendarInfo,
-  Text,
-  Link,
-} from '@/components/ui';
+import { ContentContainer, Heading, CalendarInfo, Text } from '@/components/ui';
 import { Scrollbars } from 'react-custom-scrollbars';
 import uniqid from 'uniqid';
+import { Link } from 'gatsby';
 import { EventTypes, RenderProps, UiRenderProps } from '../types';
 
 const Render = (props: RenderProps): JSX.Element => {
@@ -51,7 +46,7 @@ const MonthlyEvents = (props: UiRenderProps): JSX.Element => {
       >
         <Render filteredEvents={filteredEvents} />
       </Scrollbars>
-      <Link className="home-events__link" as="a">
+      <Link className="home-events__link" to="/dogadjaji">
         Vidi Detaljno
       </Link>
     </ContentContainer>

@@ -43,7 +43,7 @@ const CalendarUi = (props: CalendarProps): JSX.Element => {
       highlightDates={highlightDates}
       selected={startDate}
       closeOnScroll
-      locale={'en-GB'}
+      locale="en-GB"
     />
   );
 };
