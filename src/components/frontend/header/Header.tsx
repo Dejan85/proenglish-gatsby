@@ -14,10 +14,10 @@ const MemoizedUi: JSX.Element = (
       <Logo />
       <Navigation linksText={linksText} linksPath={linksPath} />
     </SubContainer>
-    {/* <Navigation.ResponsiveNavigation
+    <Navigation.ResponsiveNavigation
       linksText={linksText}
       linksPath={linksPath}
-    /> */}
+    />
   </HeaderUi>
 );
 

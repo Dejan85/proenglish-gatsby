@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import uniqid from 'uniqid';
 import { ContentContainer } from '@/components/ui';
+import { Link } from 'gatsby';
+import { FaAlignJustify } from 'react-icons/fa';
 import { NavigationProps } from './types';
 import List from './partials/List';
 
@@ -10,9 +12,8 @@ const linkClassName = 'responsive-navigation__link';
 const responsiveActiveClassName = 'responsive-navigation__active';
 
 const ResponsiveNavigation = (props: NavigationProps): JSX.Element => {
-  const { routerLink, linksText, linksPath } = props;
+  const { linksText, linksPath } = props;
   const [toggleNav, setToggleNav] = useState<boolean>(false);
-  const Link: any = routerLink;
 
   const dropNavHandler = () => {
     setToggleNav(!toggleNav);
@@ -27,7 +28,6 @@ const ResponsiveNavigation = (props: NavigationProps): JSX.Element => {
               <Link
                 className={linkClassName}
                 activeClassName={responsiveActiveClassName}
-                exact
                 to={linksPath[index]}
               >
                 {text}
@@ -36,10 +36,10 @@ const ResponsiveNavigation = (props: NavigationProps): JSX.Element => {
           ))}
       </ContentContainer>
 
-      {/* <FontAwesomeIcon
-        className="fas fa-bars responsive-navigation__icon"
+      <FaAlignJustify
+        className="responsive-navigation__icon"
         onClick={dropNavHandler}
-      /> */}
+      />
     </Wrapper>
   );
 };
