@@ -1,0 +1,152 @@
+@import '../../../styles/variables/fonts';
+@import '../../../styles/variables/colors';
+
+.events {
+  justify-content: center;
+  background-color: darken(white, 5%);
+
+  &__sub-container {
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: white;
+    min-height: 100vh;
+  }
+
+  &__heading {
+    margin-top: 8rem;
+    font-size: 3.4rem;
+    font-family: $poppins-sans-serif;
+    font-weight: 300;
+    color: #999;
+  }
+
+  &__date-picker {
+    margin-top: 5rem;
+    flex-direction: column;
+  }
+
+  &__date-picker-heading {
+    font-size: 1.6rem;
+    font-family: $lato-sans-serif;
+    font-weight: 300;
+    color: #999;
+  }
+
+  &__search-input {
+    padding: 7px;
+    border: 1px solid #d0d0d0;
+    border-left: 1px solid #ee9a20;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__heading-h2 {
+    width: 100%;
+    margin-top: 2rem;
+    border: 1px solid #d0d0d0;
+    border-left: 1.5px solid $main-color;
+    padding: 0.8rem;
+
+    font-size: 2.2rem;
+    font-family: $poppins-sans-serif;
+    font-weight: 300;
+    color: #999;
+  }
+
+  &__nav {
+    padding: 2rem 0 3rem 0;
+  }
+
+  &__nav-button {
+    font-size: 1.5rem;
+    color: #666;
+    font-family: $poppins-sans-serif;
+    font-weight: 400;
+    padding: 1rem 2rem;
+    border: 1px solid #d0d0d0;
+    border-radius: 20rem;
+    cursor: pointer;
+    background: none;
+    transition: all 0.5s;
+
+    &:hover {
+      border: 1px solid $main-color;
+      background: none;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:not(:first-child) {
+      margin-left: 1rem;
+    }
+  }
+
+  &__daily-events-calendar-info {
+    justify-content: flex-start;
+    margin-bottom: 2rem;
+  }
+
+  &__nav-button-active {
+    border: 1px solid $main-color;
+    color: $main-color;
+  }
+
+  &__daily-events {
+    flex-direction: column;
+    margin: 5rem 0;
+  }
+
+  &__monthly-content {
+    flex-direction: column;
+    margin: 5rem 0;
+  }
+
+  &__daily-events-no-events-text {
+    color: #666;
+  }
+
+  &__weekly-content {
+    margin: 5rem 0;
+  }
+
+  &__weekdays {
+    flex-direction: column;
+    width: 14.28%;
+  }
+
+  &__weekdays-header {
+    background-color: #00a2a6;
+    padding: 1.6rem 0;
+    border-left: 0.1px solid #00acb0;
+    font-size: 1.6rem;
+    font-family: $poppins-sans-serif;
+    color: white;
+    text-align: center;
+  }
+
+  &__weekdays-content {
+    border: 0.1px solid #eee;
+    height: 50rem;
+  }
+
+  &__weekdays-content-event-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
+  &__weekdays-content-event-text {
+    font-size: 1.4rem;
+    font-family: $poppins-sans-serif;
+    text-align: center;
+
+    &--bold {
+      font-weight: 600;
+    }
+  }
+}
