@@ -1,27 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './styles.scss';
 import { Loading } from '@/components/ui';
-import axios from 'axios';
+import { useInjectReducer } from '@/utils/injectReducer';
+import { useInjectSaga } from '@/utils/injectSaga';
+import { useDispatch, useSelector } from 'react-redux';
+import { getExamsData } from './selectors';
+import { EXAMS_SCOPE } from './contants';
+import { fetchExamsData, reducer } from './slice';
+import saga from './saga';
 import RenderUI from './patials/RenderUI';
 
-const request = async (setBlogData: {
-  (value: (prevState: undefined) => undefined): void;
-  (arg0: any): void;
-}) => {
-  try {
-    const urlX = 'http://207.154.226.106/exams/get';
-    const { data } = await axios(urlX);
-    setBlogData(data);
-  } catch (error) {
-    console.log('test', error);
-  }
-};
-
 const Exams = (): JSX.Element => {
-  const [examsData, setExamsData] = useState([]);
+  useInjectReducer({ key: EXAMS_SCOPE, reducer });
+  useInjectSaga({ key: EXAMS_SCOPE, saga });
+  const dispatch = useDispatch();
+  const { examsData } = useSelector(getExamsData);
+
   useEffect(() => {
-    request(setExamsData);
     window.scrollTo(0, 0);
+    dispatch(fetchExamsData());
   }, []);
   return examsData.length ? (
     <RenderUI examsData={examsData} />
