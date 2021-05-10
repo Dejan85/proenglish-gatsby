@@ -5,7 +5,7 @@ import {
   WelcomePage,
   HomeAbout,
   HomeCourse,
-  Blog,
+  HomeBlog,
   HomeEvents,
   Newsletter,
   Experience,
@@ -16,7 +16,7 @@ const Home: React.FC<PageProps> = (): JSX.Element => (
     <WelcomePage />
     <HomeAbout />
     <HomeCourse />
-    <Blog />
+    <HomeBlog />
     <HomeEvents />
     <Newsletter />
     <Experience />
