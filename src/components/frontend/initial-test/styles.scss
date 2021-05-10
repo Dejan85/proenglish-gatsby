@@ -1,0 +1,118 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables/fonts';
+@import '../../../styles/mixins/respond';
+
+.initialTest {
+  display: flex;
+  flex-direction: column;
+  max-width: 120rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 6rem 2rem 6rem 2rem;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 7rem 0 0 0;
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__questions_box {
+    padding: 4rem 0 0 0;
+  }
+
+  &__radio_box {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__h2 {
+    padding: 0 0 1rem 0;
+  }
+
+  &__label {
+    padding: 0 0 0 1rem;
+  }
+
+  &__p {
+    padding: 0 0 0 2rem;
+  }
+
+  &__btn_container {
+    display: flex;
+    //  justify-content: center;
+    width: 100%;
+    margin: 4rem 0;
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 1rem 5rem;
+    background: $main-color;
+    transition: all 1s;
+    // width: 20rem;
+    width: inherit;
+    cursor: pointer;
+    user-select: none;
+
+    @include respond(900) {
+      margin: 5rem 0;
+    }
+
+    &:hover {
+      background: darken($main-color, 20%);
+    }
+  }
+
+  &__enter_test_modal {
+    display: flex;
+    flex-direction: column;
+    max-width: 120rem;
+    width: 100%;
+    height: 96vh;
+    margin: 0 auto;
+    padding: 6rem 2rem 6rem 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__show_result_page {
+    display: flex;
+    flex-direction: column;
+    max-width: 120rem;
+    width: 100%;
+    height: 96vh;
+    margin: 0 auto;
+    padding: 6rem 2rem 6rem 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__show_result_page_p {
+    padding: 10rem 0;
+  }
+
+  &__show_result_page_btn {
+    display: inline-block;
+    padding: 1rem 5rem;
+    background: $main-color;
+    transition: all 1s;
+    width: 20rem !important;
+    width: inherit;
+    cursor: pointer;
+    user-select: none;
+
+    @include respond(900) {
+      margin: 5rem 0;
+    }
+
+    &:hover {
+      background: darken($main-color, 20%);
+    }
+  }
+}

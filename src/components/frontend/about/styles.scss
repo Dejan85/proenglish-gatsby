@@ -76,16 +76,26 @@
     }
   }
 
+  &__text {
+    @include respond(900) {
+      padding: 0 2rem;
+    }
+  }
+
   &__text-left {
     padding-right: 0rem;
     padding-left: 3rem;
+
+    @include respond(900) {
+      padding: 0 2rem;
+    }
   }
 
   &__image {
     width: 40%;
 
     @include respond(900) {
-      display: none;
+      display: none !important;
     }
   }
 }

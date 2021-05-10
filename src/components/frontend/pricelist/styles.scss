@@ -1,5 +1,6 @@
 @import '../../../styles/variables/colors';
 @import '../../../styles/variables/fonts';
+@import '../../../styles/mixins/respond';
 
 .pricelist {
   background-color: darken(white, 5%);
@@ -11,12 +12,20 @@
     flex-direction: column;
     align-items: flex-start;
     background-color: white;
+
+    @include respond(900) {
+      padding: 5rem 2rem 0 2rem;
+    }
   }
 
   &__heading {
     font-family: $lato-sans-serif;
     font-size: 2.6rem;
     padding-bottom: 4rem;
+
+    @include respond(900) {
+      font-size: 4rem;
+    }
   }
 
   &__text {
@@ -31,6 +40,10 @@
     width: 100%;
     border: 0.2px solid rgb(199, 98, 3);
     margin-bottom: 4rem;
+
+    @include respond(900) {
+      align-self: center;
+    }
   }
 
   &__table-row {

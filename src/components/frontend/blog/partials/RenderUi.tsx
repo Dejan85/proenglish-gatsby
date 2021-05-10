@@ -36,6 +36,7 @@ const BlogModal = (props: {
           className="blog__modal-image"
           disablelazyLoad
         /> */}
+        <div className="blog__modal-image" />
       </ContentContainer>
       <ContentContainer className="blog__modal-content">
         <Text className="blog__modal-date" as="span">

@@ -68,8 +68,11 @@
     }
 
     &__container {
+      display: flex;
+      justify-content: space-between;
       position: absolute;
       width: 100%;
+      // height: 100vh;
       flex-direction: column;
       top: 0;
       z-index: 108;

@@ -12,3 +12,4 @@ export { Pricelist } from './pricelist';
 export { Blog, BlogPage } from './blog';
 export { Events } from './events';
 export { Contact } from './contact';
+export { InitialTest } from './initial-test';

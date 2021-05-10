@@ -32,6 +32,10 @@
 
   &__heading-container {
     flex-direction: column;
+
+    @include respond(900) {
+      align-items: center;
+    }
   }
 
   &__heading {
@@ -50,6 +54,10 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+
+    @include respond(900) {
+      margin-top: 10rem;
+    }
   }
 
   &__input-holder {

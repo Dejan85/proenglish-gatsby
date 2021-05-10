@@ -1,6 +1,6 @@
-@import "../../../../styles/variables/fonts";
-@import "../../../../styles/variables/colors";
-@import "../../../../styles/mixins/respond";
+@import '../../../../styles/variables/fonts';
+@import '../../../../styles/variables/colors';
+@import '../../../../styles/mixins/respond';
 
 .home-course {
   height: 55rem;
@@ -50,6 +50,17 @@
 
   &__left-text-container {
     justify-content: flex-end;
+    padding: 0 0 0 1rem;
+
+    &--order-2 {
+      @include respond(900) {
+        order: 2;
+      }
+    }
+  }
+
+  &__right-text-container {
+    padding: 0 1rem 0 0;
 
     &--order-2 {
       @include respond(900) {

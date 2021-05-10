@@ -1,8 +1,9 @@
 import React, { useState, useMemo } from 'react';
-import { ContentContainer, Link, Text } from '@/components/ui';
+import { ContentContainer, Text } from '@/components/ui';
 import uniqid from 'uniqid';
 import { useStringSplit } from '@/hooks';
 import { FaCaretLeft, FaCaretRight } from 'react-icons/fa';
+import { Link } from 'gatsby';
 import { heading, text, textInSpan, courseData } from '../messages';
 
 const initCourse = ['a1', 'a2', 'b1', 'b2', 'c1', 'c2'];
@@ -69,7 +70,7 @@ const RenderUi = (): JSX.Element => {
     <ContentContainer className="course">
       <ContentContainer className="course__top-container">
         <ContentContainer className="course__right-content">
-          <Link as="a" href="/" className="course__heading">
+          <Link to="/testirajsvojeznanje" className="course__heading">
             {heading}
           </Link>
 
