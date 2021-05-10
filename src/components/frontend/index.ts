@@ -8,3 +8,4 @@ export { Experience } from './home/experience';
 export { About } from './about';
 export { Course } from './course';
 export { Exams } from './exams';
+export { Pricelist } from './pricelist';
